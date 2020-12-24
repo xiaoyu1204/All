@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.day5_zuo"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation project(path: ':stamperlib')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+    //吸顶
+    implementation 'com.android.support:design:23.1.1'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'//Retrofit依赖
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0' // 可选依赖，解析json字符所用
+    //rxjava+retrofit
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'//配合Rxjava 使用
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    implementation 'com.android.support:design:30.0.0'  //侧滑菜单 recyclerview
+    implementation 'com.github.bumptech.glide:glide:4.11.0'   //加载图片Glid
+    implementation 'com.youth.banner:banner:1.4.10'      //轮播图
+
+    implementation "org.reactivestreams:reactive-streams:1.0.2"//Rxjava2
+
+    //图片水印
+    implementation 'com.huangyz0918:androidwm:0.2.3'
+
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <!--写3个控件
+      CoordinatorLayout
+      AppBarLayout
+      CollapsingToolbarLayout-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <!--app:contentScrim:ImageView折叠后Toolbar的颜色
+         app:collapsedTitleGravity="right" 表示折叠之后Title显示的位置
+        app:expandedTitleGravity="left|bottom" 表示展开时Title显示的位置-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@mipmap/img"
+            android:scaleType="centerCrop"
+            app:layout_scrollFlags="scroll|enterAlways"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="标题"
+            />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"></androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.day5_zuo.CircleView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+        
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

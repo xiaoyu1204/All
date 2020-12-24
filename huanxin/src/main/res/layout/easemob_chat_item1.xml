@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/ll"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_img1"
+        android:src="@mipmap/ic_launcher"
+        android:layout_margin="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="50dp"
+        android:layout_height="50dp"/>
+
+    <RelativeLayout
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="100dp"
+        android:background="@mipmap/icon_char_bg1">
+
+        <TextView
+            android:id="@+id/tv_chat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:text="111111的开发骄傲i士大夫艰苦拉萨免费看舍得离开房间ask浪费机阿里山扩大飞机卡拉第三方啊卡拉第三方ask劳动法爱的色放卡戴珊开了房间as
+上的飞机拉萨酱豆腐卢卡斯士大夫你困了就的开发骄傲i士大夫艰苦拉萨免费看舍得离开房间ask浪费机阿里山扩大飞机卡拉第三方啊卡拉第三方ask劳动法爱的色放卡戴珊开了房间as
+上的飞机拉萨酱豆腐卢卡斯士大夫你困了就111"></TextView>
+
+        <ImageView
+            android:id="@+id/img_icon1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

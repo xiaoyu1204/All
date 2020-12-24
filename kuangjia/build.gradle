@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.example.kuangjia"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //解析json
+    implementation 'com.google.code.gson:gson:2.2.4'
+
+    //OkHttpClient
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+
+    //最新版本	Banner
+    implementation 'com.youth.banner:banner:1.4.10'
+
+    //卡片佈局
+    implementation 'com.android.support:cardview-v7:30.0.0'
+
+        //侧滑菜单，tablayout，recyclerview
+    implementation  'com.android.support:design:30.0.0'
+
+    //不用异步加载器加载图片
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    //SmartRefreshLayout	自动加载自动刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7'
+
+    //retrofit和rxjava结合
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'  //Retrofit依赖
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0' // 必要依赖，解析json字符
+
+    //RxJava依赖
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+
+    //Eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+
+    //动态权限
+    implementation 'com.github.dfqin:grantor:1.1.0'
+
+    //设置图片
+    implementation 'com.facebook.fresco:fresco:1.12.1'
+
+    //过滤器
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    implementation "org.reactivestreams:reactive-streams:1.0.2"
+
+    //Butterknife
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+}
